@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 
 <!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
 <!--[if !IE]><!-->
@@ -536,7 +536,7 @@
 									Our helpline is always open to receive any inquiry or feedback. Please feel free to drop us an email from the form below and we will get back to you as soon as we can.
 								</p>
 							</div>
-							<form id="contact-form">
+							<form id="contact-form" method="POST" action="https://formspree.io/serajo@carbtc.net">
 								<div class="form-group">
 									<input type="text" placeholder="Your Name" id="id-name" class="form-control c-square c-theme input-lg">
 								</div>
@@ -552,7 +552,7 @@
 								<button type="submit" class="btn c-theme-btn c-btn-uppercase btn-lg c-btn-bold c-btn-square">Submit</button>
 							</form>
 
-                            <form method="POST" action="https://formspree.io/serajo@carbtc.net">
+                            <!--<form method="POST" action="https://formspree.io/serajo@carbtc.net">
                                 <input type="text" name="name" placeholder="Your Name">
                                 <input type="email" name="email" placeholder="Your email">
                                 <input type="text" name="phone" placeholder="Your Phone">
@@ -560,7 +560,7 @@
 
                                 <textarea name="message" placeholder="Your message"></textarea>
                                 <button type="submit">Send</button>
-                            </form>
+                            </form>-->
 						</div>
 					</div>
 					
@@ -793,29 +793,29 @@
 		App.init(); // init core    
 	});
 
-	$(document).ready(function () {
-	    $('#contact-form').submit(function (e) {
-	        var name = document.getElementById('id-name')
-	        var email = document.getElementById('id-email')
-	        var phone = document.getElementById('id-phone')
-	        var message = document.getElementById('id-message')
+	//$(document).ready(function () {
+	//    $('#contact-form').submit(function (e) {
+	//        var name = document.getElementById('id-name')
+	//        var email = document.getElementById('id-email')
+	//        var phone = document.getElementById('id-phone')
+	//        var message = document.getElementById('id-message')
 
-	        if (!name.value || !email.value || !message.value) {
-	            alertify.error("Please check your entries");
-	            return false;
-	        } else {
-	            $.ajax({
-	                method: 'POST',
-	                url: '//formspree.io/serajo@carbtc.net',
-	                data: $('#contact-form').serialize(),
-	                datatype: 'json'
-	            });
-	            e.preventDefault();
-	            $(this).get(0).reset();
-	            alertify.success("Message sent");
-	        }
-	    });
-	});
+	//        if (!name.value || !email.value || !message.value) {
+	//            alertify.error("Please check your entries");
+	//            return false;
+	//        } else {
+	//            $.ajax({
+	//                method: 'POST',
+	//                url: '//formspree.io/serajo@carbtc.net',
+	//                data: $('#contact-form').serialize(),
+	//                datatype: 'json'
+	//            });
+	//            e.preventDefault();
+	//            $(this).get(0).reset();
+	//            alertify.success("Message sent");
+	//        }
+	//    });
+	//});
 	</script>
 <!-- END: THEME SCRIPTS -->
 <!-- END: LAYOUT/BASE/BOTTOM -->
